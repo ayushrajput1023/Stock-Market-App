@@ -5,6 +5,9 @@ body{
   background-color: #f0f0f0;
   font-family: cursive;
 }
+h1{
+  font-weight: bold;
+}
 
 strong{
   color: black;
@@ -40,11 +43,10 @@ button{
 
 .butright{
   border-radius: 50%;
-  margin-right: 60px;
   margin-left: 0;
 }
 .navelement{
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 
@@ -67,19 +69,47 @@ button{
   padding-top: 25px;
 }
 
-@media only screen and (min-width:768px){
+@media (min-width: 794px) and (max-width:964px){
+
+.navelement{
+  margin-left: 0;
+}
+.logo{
+  margin-left: 0;
+}
+.inpleft{
+  margin-left: 5px;
+}
+}
+
+@media (min-width:768px) and (max-width:793px){
   .smallnav{
-    text-align: left;
+    padding-left: 2px;
+    padding-right: 5px;
+  }
+  .navelement{
+    margin-left: 0;
+  }
+  .logo{
+    margin-left: 0;
+  }
+  .inpleft{
+    margin-left: 0;
+  }
+  .butright{
+    padding: 0;
   }
 }
 
-@media only screen and (min-width:360px){
-  .smallnav{
-    text-align: left;
-  }
+@media (max-width:767px){
+
   .inpleft{
-    width: 11.8em;
-    margin-right: 10px;
-    margin-left: 28px;
+    margin-left: 30px;
+    width: 42%;
   }
+  .navelement{
+    text-align: left;
+    margin-left: 32px;
+  }
+
 }

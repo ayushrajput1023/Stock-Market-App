@@ -3,6 +3,9 @@ body{
   font-family: cursive;
 }
 
+h1{
+  font-weight: bold;
+}
 
 #ayush{
   display: run-in;
