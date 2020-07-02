@@ -2,7 +2,6 @@
 const ex = require('express');
 const bp = require('body-parser');
 const rq = require('request');
-//const es = require('ejs');
 
 const app = ex();
 app.set('view engine', 'ejs');
@@ -10,13 +9,11 @@ app.use(bp.urlencoded({extended:true}));
 app.use(ex.static("public"));
 
 
-// app.get('/',function(req,res){
-//   res.send("Ayush");
-// })
+
 
 app.get('/',function(req,ress){
 
-//var link = 'https://cloud.iexapis.com/stable/stock/ab/quote?token=pk_caa40eddebbd4e34a5e93bbdba51a902';
+
 
 rq.get('https://cloud.iexapis.com/stable/stock/fb/quote?token=pk_caa40eddebbd4e34a5e93bbdba51a902',{json: true},(err,res,body)=>{
  if(err) {ress.render('failure')}
@@ -126,8 +123,3 @@ rq(options,function(error,response,body){
 app.listen(process.env.PORT || 100,function(){
   console.log("SERVER running on PORT 100");
 })
-
-
-//0c07dda80e0c82cd28e4056c293d271d-us8
-
-//3a51c681cf
